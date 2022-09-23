@@ -17,7 +17,6 @@ fn main() {
     struct Emp_data(i64, String);
 
     fn set_salary(i: u32) -> Emp_data {
-        println!("RECEIVED: {}", i);
         match i {
             1 => Emp_data(50000, String::from("JUNIOR ENGINEER")),
             2 => Emp_data(60000, String::from("SENIOR ENGINEER")),
