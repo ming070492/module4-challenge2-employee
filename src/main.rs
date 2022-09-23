@@ -14,13 +14,13 @@ fn main() {
         stc_type: String,
     }
 
-    struct Emp_data(i64, String);
+    struct EmpData(i64, String);
 
-    fn set_salary(i: u32) -> Emp_data {
+    fn set_salary(i: u32) -> EmpData {
         match i {
-            1 => Emp_data(50000, String::from("JUNIOR ENGINEER")),
-            2 => Emp_data(60000, String::from("SENIOR ENGINEER")),
-            _ => Emp_data(0, String::from("UNEMPLOYED")),
+            1 => EmpData(50000, String::from("JUNIOR ENGINEER")),
+            2 => EmpData(60000, String::from("SENIOR ENGINEER")),
+            _ => EmpData(0, String::from("UNEMPLOYED")),
         }
     }
 
@@ -30,7 +30,7 @@ fn main() {
     
     let mut em_name = String::new();
     let mut em_id = String::new();
-    let mut em_type: u32 = 0;
+    let em_type: u32;
     
     
     println!("{}", "ENTER EMPLOYEE NAME: ".bright_cyan());
