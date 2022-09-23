@@ -48,18 +48,18 @@ fn main() {
         println!("{}", "ENTER EMPLOYEE TYPE CODE: ".bright_cyan());
         io::stdin()
             .read_line(&mut em_t)
-            .expect("PLEASE ENTER A NUMBER BETWEEN 1 AND 2");
+            .expect("PLEASE ENTER A NUMBER EITHER 1 OR 2");
 
         em_type = match em_t.trim().parse(){
             Ok(n) => match n{
                 1 | 2 => n,
                 _ => {
-                    println!("{} {}", "ERROR:".red(), "PLEASE ENTER A NUMBER BETWEEN 1 AND 2");
+                    println!("{} {}", "ERROR:".red(), "PLEASE ENTER A NUMBER EITHER 1 OR 2");
                     continue;
                 },
             },
             Err(_) => {
-                println!("{} {}", "ERROR:".red(), "PLEASE ENTER A NUMBER BETWEEN 1 AND 2");
+                println!("{} {}", "ERROR:".red(), "PLEASE ENTER A NUMBER EITHER 1 OR 2");
                 continue;
             },
         };
